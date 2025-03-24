@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ủng Hộ Trẻ Em Vùng Cao</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ủng Hộ Trẻ Em Vùng Cao</h1>
+        <p>Hãy chung tay giúp đỡ trẻ em vùng cao có một tương lai tươi sáng hơn! Mọi sự đóng góp của bạn đều rất đáng quý.</p>
+
+        <div class="qr-section">
+            <p>Quét mã QR để chuyển khoản nhanh:</p>
+            <img src="image/code.jpg" alt="Mã QR Chuyển Khoản">
+        </div>
+
+        <div class="bank-info">
+            💳 <strong>Số tài khoản:</strong> 1234 5678 910<br>
+            📌 <strong>Ngân hàng:</strong> Vietcombank<br>
+            🔹 <strong>Chủ tài khoản:</strong> Nguyễn Văn A
+        </div>
+
+        <h2>Xác nhận ủng hộ</h2>
+        <form id="donation-form">
+            <label for="name">Tên người gửi:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="amount">Số tiền ủng hộ (VNĐ):</label>
+            <input type="text" id="amount" name="amount" required>
+            
+            <script>
+            document.getElementById("amount").addEventListener("input", function (e) {
+                let value = e.target.value.replace(/\D/g, ""); // Loại bỏ ký tự không phải số
+                if (value) {
+                    value = parseInt(value).toLocaleString("vi-VN") + " VND"; // Định dạng có dấu phẩy + thêm " VND"
+                }
+                e.target.value = value;
+            });
+            </script>
+            
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="number" id="phone" name="phone" required>
+
+            <label for="note">Lời nhắn:</label>
+            <input type="text" id="note" name="note">
+
+            <button type="submit">Gửi xác nhận</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

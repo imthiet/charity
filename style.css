@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #210605;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.qr-section {
+    margin: 20px 0;
+}
+
+.qr-section img {
+    width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.bank-info {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #34164e;
+}
+
+.donate-btn {
+    display: inline-block;
+    background: #390271;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.donate-btn:hover {
+    background: #390271;
+}
+
+/* Form */
+form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background: #390271;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #f3f4f3;
+    color: #390271;
+    cursor: pointer;
+    border-color: #390271;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .qr-section img {
+        width: 150px;
+    }
+
+    .donate-btn, button {
+        width: 100%;
+    }
+}
