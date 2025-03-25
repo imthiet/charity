@@ -37,6 +37,8 @@ p {
 
 .qr-section img {
     width: 300px;
+    min-width: 50%;
+    min-height: 30%px;
     border: 2px solid #ddd;
     border-radius: 10px;
 }
