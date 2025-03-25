@@ -6,9 +6,16 @@
 }
 
 body {
-    background-color: #f9f9f9;
+  
     text-align: center;
     padding: 20px;
+
+    background-image: url('image/rice_field.jpg'); /* Đường dẫn đến ảnh */
+    background-size: cover; /* Căn chỉnh ảnh để phủ toàn bộ màn hình */
+    
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-attachment: fixed; /* Giữ ảnh cố định khi cuộn trang */
 }
 
 .container {
