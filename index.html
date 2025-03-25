@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ủng Hộ Trẻ Em Vùng Cao</title>
     <link rel="stylesheet" href="style.css">
+
+  
+    
 </head>
 <body>
 
@@ -18,12 +21,22 @@
         </div>
 
         <div class="bank-info">
-            💳 <strong>Số tài khoản:</strong> 1234 5678 910<br>
-            📌 <strong>Ngân hàng:</strong> Vietcombank<br>
-            🔹 <strong>Chủ tài khoản:</strong> Nguyễn Văn A
+            <p>
+                💳 <strong>Số tài khoản:</strong> <span id="account-number">1234 5678 910</span>
+                <span class="copy-icon" onclick="copyToClipboard('account-number')">📋 copy</span>
+            </p>
+            <p>
+                📌 <strong>Ngân hàng:</strong> <span id="bank-name">Vietcombank</span>
+                <span class="copy-icon" onclick="copyToClipboard('bank-name')">📋 copy</span>
+            </p>
+            <p>
+                🔹 <strong>Chủ tài khoản:</strong> <span id="account-owner">Nguyễn Văn A</span>
+                <span class="copy-icon" onclick="copyToClipboard('account-owner')">📋 copy</span>
+            </p>
         </div>
+        
 
-        <h2>Xác nhận ủng hộ</h2>
+        <h2>Xác nhận ủng hộ (Sau khi đã chuyển khoản)</h2>
         <form id="donation-form">
             <label for="name">Tên người gửi:</label>
             <input type="text" id="name" name="name" required>

@@ -120,3 +120,14 @@ button:hover {
         width: 100%;
     }
 }
+.copy-icon {
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 18px;
+    color: #007bff;
+    transition: color 0.2s;
+}
+
+.copy-icon:hover {
+    color: #0056b3;
+}

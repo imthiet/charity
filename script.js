@@ -41,3 +41,25 @@ document
       })
       .catch((error) => console.error("Lỗi gửi dữ liệu:", error));
   });
+function copyToClipboard(elementId) {
+  let text = document.getElementById(elementId).innerText;
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        alert("Đã sao chép: " + text);
+      })
+      .catch((err) => {
+        console.error("Lỗi sao chép: ", err);
+      });
+  } else {
+    let textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+    alert("Đã sao chép: " + text);
+  }
+}
