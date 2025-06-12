@@ -4,7 +4,8 @@
   - Màu đen là các hàng, kệ
   - Vàng: vật cản nhẹ
   - Trắng: các ô free to go
-  - Xanh: bắt đầu đi
+  - Xanh: Đường đi
+  - Xanh biển: bắt đầu đi
   - Đỏ: điểm đến cuối cùng
 
 - Code với thư viện pygame, math, random
@@ -174,4 +175,25 @@ while running:
 
 pygame.quit()
 ```
+
+
+Kết quả khi chạy thử với nhiều vật cản khác nhau:
+
+![image](https://github.com/user-attachments/assets/4076abe5-106d-4722-8b2b-5f9bbc5b2d5d)
+
+
+Ví dụ 2:
+
+Map ban đầu:
+
+![image](https://github.com/user-attachments/assets/2bf22065-7ffa-44f5-8c7c-19eca0be23a1)
+
+
+Vẽ đường đi:
+
+![image](https://github.com/user-attachments/assets/8b716a3c-efa1-461b-bb54-0cbcd8f9a6d3)
+
+
+
+--> Tiếp theo sẽ là tùy chỉnh điểm start, goal, di chuyển từng bước 1.( start, goal sẽ là input khi kết hợp với thiết bị iot)
 
