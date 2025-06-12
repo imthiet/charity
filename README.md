@@ -227,8 +227,6 @@ grid = [
   [1, 1, 0, -1, 0],
   ...
 ]
-
-
 ```
 - Các yếu tố cải thiện ngoại quan:
 
