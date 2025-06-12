@@ -129,7 +129,8 @@ else:
 - 99 là đường đi khó khắn ( chi phí cao hơn)
 
 - ma trận giả tưởng:
-
+  
+```
 grid = [
   [1, 1, 1, 1, 1],
   [1, 99, 99, 99, 1],
@@ -137,7 +138,7 @@ grid = [
   [99, 99, 1, 99, 1],
   [1, 1, 1, 1, 1]
 ]
-
+```
 
 - code toàn bộ:
 ```
@@ -203,4 +204,39 @@ else:
 
 ![image](https://github.com/user-attachments/assets/1af15230-3e90-4884-b883-572816acf41f)
 
+
+## Hướng phát triển:
+
+- Tích hợp bản đồ thực tế với IOT:
+Dùng camera + Lidar để quét môi trường và tạo ma trận bản đồ tự động (gọi là occupancy grid trong ROS).
+
+Giá trị có thể là:
+
+ - 0: vùng trống
+
+ - 1: vật cản
+
+ - -1: chưa biết
+
+- Ví dụ:
+
+```
+grid = [
+  [0, 0, 0, 1, 1],
+  [0, -1, 0, 0, 0],
+  [1, 1, 0, -1, 0],
+  ...
+]
+
+
+```
+- Các yếu tố cải thiện ngoại quan:
+
+- Thời gian cập nhật bản đồ theo thời gian thực (dùng sensor)
+
+- Khu vực đông người → tăng trọng số di chuyển
+
+- Lập bản đồ động (SLAM) khi robot vừa đi vừa vẽ bản đồ
+
+- Định hướng di chuyển (heading) nếu robot không thể xoay nhanh hoặc không quay đầu lại.
 
