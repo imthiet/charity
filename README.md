@@ -237,4 +237,47 @@ grid = [
 - Lập bản đồ động (SLAM) khi robot vừa đi vừa vẽ bản đồ
 
 - Định hướng di chuyển (heading) nếu robot không thể xoay nhanh hoặc không quay đầu lại.
+  
+## Thêm 8 hướng di chuyển
+
+- Ngoài các hướng di chuyển cơ bản: trái, phải, lên, xuống ta thêm các hướng di chuyển chéo.
+  - 4 hướng cơ bản:
+
+```
+    ↑
+←   x   →
+    ↓
+
+```
+
+  - thêm 4 hướng chéo :
+```
+↖   ↑   ↗
+←   x   →
+↙   ↓   ↘
+
+```
+- Với 8 hướng, có thể di chuyển linh hoạt hơn, ngắn hơn, thực tế hơn:
+
+- Các thay đổi với code ban đầu:
+
+```
+neighbors = [
+    (-1, 0), (1, 0), (0, -1), (0, 1),       # Trên, Dưới, Trái, Phải
+    (-1, -1), (-1, 1), (1, -1), (1, 1)      # Các hướng chéo
+]
+```
+Thêm chi phí cho đường chéo là sqrt(2) thay vì 1:
+
+```
+ move_cost = math.sqrt(2) if dx != 0 and dy != 0 else 1
+
+```
+Kết quả đã có thể đi theo đường chéo:
+
+![image](https://github.com/user-attachments/assets/9f09075a-904c-4365-92e4-109347e81626)
+
+
+
+
 
